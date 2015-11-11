@@ -1,8 +1,8 @@
-ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
+ACCEL_ASCII "W:\01_projekts\99_localgitrepo\CPPS_Table\hw\v1\ArduinoCPPSShield_v2\ArduinoCPPSShield_v2.pcb"
 
 (asciiHeader 
   (asciiVersion 3 0)
-  (timeStamp 2014 8 8 11 49 57)
+  (timeStamp 2015 11 11 11 6 55)
   (program "P-CAD 2006 PCB" "19.02.9589")
   (copyright "Copyright © 1991-2006 Altium Limited")
   (fileAuthor "")
@@ -2247,6 +2247,8 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
         (line (pt -37.5 37.5) (pt 3.01625 mm 37.5) (width 6.0) )
         (line (pt -37.5 -37.5) (pt 3.01625 mm -37.5) (width 6.0) )
       )
+      (layerContents  (layerNumRef  7)
+      )
       (layerContents  (layerNumRef  10)
         (line (pt -25.0 -25.0) (pt -25.0 25.0) (width 6.0) )
         (line (pt 2.69875 mm -25.0) (pt 2.69875 mm 25.0) (width 6.0) )
@@ -2530,6 +2532,8 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
         (line (pt 175.0 -1.11125 mm) (pt 175.0 1.11125 mm) (width 6.0) )
         (line (pt -1.11125 mm -1.11125 mm) (pt 175.0 -1.11125 mm) (width 6.0) )
         (line (pt -1.11125 mm 1.11125 mm) (pt 175.0 1.11125 mm) (width 6.0) )
+      )
+      (layerContents  (layerNumRef  7)
       )
       (layerContents  (layerNumRef  10)
         (line (pt 0.0 -0.79375 mm) (pt 0.0 0.79375 mm) (width 6.0) )
@@ -3028,7 +3032,7 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
         (padNum  2) (compPinRef "2")
       )
     )
-    (attr "Description" "Capacitor" (pt 412.0 483.0) (justify LowerRight) (textStyleRef "(Default)") )
+    (attr "Description" "Capacitor" (pt 412.0 483.0) (justify LowerRight) (textStyleRef "(Default)") (constraintUnits string) )
     (attr "Value" "{Value}" (isVisible True) (textStyleRef "(Default)") )
   )
   (compDef "CAPS0603/0805_1"
@@ -3051,7 +3055,7 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
         (padNum  2) (compPinRef "2")
       )
     )
-    (attr "Description" "Valable pour formats 0805 et 1206" (pt 412.0 483.0) (justify LowerRight) (textStyleRef "(Default)") )
+    (attr "Description" "Valable pour formats 0805 et 1206" (pt 412.0 483.0) (justify LowerRight) (textStyleRef "(Default)") (constraintUnits string) )
     (attr "Value" "{Value}" (isVisible True) (textStyleRef "(Default)") )
   )
   (compDef "CONNB1X7_1"
@@ -3183,14 +3187,14 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
     (originalName "CAPS1206")
     (compValue "47uF")
     (attr "RefDes2" "{RefDes2}" (pt 0.0 68.8) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
-    (attr "Description" "Capacitor" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") )
+    (attr "Description" "Capacitor" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") (constraintUnits string) )
   )
   (compInst "C9"
     (compRef "CAPS0603/0805_1")
     (originalName "CAPS0603/0805")
     (compValue "100nF")
     (attr "RefDes2" "{RefDes2}" (pt 0.0 37.5) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
-    (attr "Description" "Valable pour formats 0805 et 1206" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") )
+    (attr "Description" "Valable pour formats 0805 et 1206" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") (constraintUnits string) )
   )
   (compInst "D1"
     (compRef "D400_1")
@@ -3657,11 +3661,11 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
     (pattern (patternRef "CC1206_1") (refDesRef "C13") (pt 94.1388 mm 84.47752 mm) (rotation 90.0) (isFlipped True)(patternGraphicsNameRef "Primary")
       (patternGraphicsRef 
         (patternGraphicsNameRef "Primary")
-        (attr "RefDes2" "{RefDes2}" (pt 0.0 68.8) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
         (attr "Value" "47uF" (pt 0.0 1.74625 mm) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
         (attr "Type" "CAPS1206" (pt 0.0 1.74625 mm) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
         (attr "RefDes" "C13" (pt 0.0 1.74625 mm) (rotation 90.0) (isFlipped True) (isVisible True) (justify Center) (textStyleRef "50/5") )
-        (attr "Description" "Capacitor" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") )
+        (attr "RefDes2" "{RefDes2}" (pt 0.0 68.8) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
+        (attr "Description" "Capacitor" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") (constraintUnits string) )
       )
     )
     (via (viaStyleRef "V80-0.9") (pt 118.99088 mm 3908.1) (rotation 90.0) (netNameRef "D4") )
@@ -3699,11 +3703,11 @@ ACCEL_ASCII "C:\Users\sngb\Desktop\Mes Projets\CPPS\ArduinoCPPSShield_v2.pcb"
     (pattern (patternRef "RC0603/0805_1") (refDesRef "C9") (pt 92.1388 mm 85.47752 mm) (rotation 90.0) (isFlipped True)(patternGraphicsNameRef "Primary")
       (patternGraphicsRef 
         (patternGraphicsNameRef "Primary")
-        (attr "RefDes2" "{RefDes2}" (pt 0.0 37.5) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
         (attr "Type" "CAPS0603/0805" (pt 0.0 37.5) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
         (attr "Value" "100nF" (pt 0.0 37.5) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
         (attr "RefDes" "C9" (pt 0.0 37.5) (rotation 90.0) (isFlipped True) (isVisible True) (justify Center) (textStyleRef "50/5") )
-        (attr "Description" "Valable pour formats 0805 et 1206" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") )
+        (attr "RefDes2" "{RefDes2}" (pt 0.0 37.5) (rotation 90.0) (isFlipped True) (justify Center) (textStyleRef "50/5") )
+        (attr "Description" "Valable pour formats 0805 et 1206" (rotation 90.0) (isFlipped True) (justify LowerRight) (textStyleRef "(Default)") (constraintUnits string) )
       )
     )
     (via (viaStyleRef "V80-0.9") (pt 84.1388 mm 116.97752 mm) (netNameRef "NET00000") )
