@@ -34,7 +34,7 @@ void loop()
 
 		if(getCurrenStartButtonState())
 		{
-			changePWMSettings(getPotFrequency(), 0.40);
+			changePWMSettings(getPotFrequency(), 0.33);
 			doPWM();
 		}
 

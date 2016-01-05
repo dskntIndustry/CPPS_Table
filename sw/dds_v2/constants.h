@@ -29,7 +29,7 @@
 // =16MHz / 4080 (Prescaler :8)
 #define CLKREF					3921.57
 // 15Hz max
-#define FREQUENCY_MAX			15.0 
+#define FREQUENCY_MAX			12.0 
 //  1Hz min  
 #define FREQUENCY_MIN			1.0
 //  5Hz  

@@ -23,7 +23,7 @@ void doPWM()
 	if(pwm_frequency < (double)FREQUENCY_THRES)
 	{
 
-		pwm_duty = pwm_frequency*0.1;
+		pwm_duty = pwm_frequency*0.02;
 		digitalWrite(PWM_OUTPUT_0, HIGH);
 		digitalWrite(PWM_OUTPUT_1, LOW);
 
