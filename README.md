@@ -1,6 +1,7 @@
 # CPPS_Table
 Command SW for the CPPS Tables (Pedagogic Seismic Simulation Tables)
 
+## V1
 ## Dependencies
 
 To developp software for this project,
@@ -20,3 +21,7 @@ To choose which version you want to generate, open the userConfiguration.h file 
 and uncomment the following define
 
 * define CFG_RodShaking             // 4 Rods with static frequency
+
+##V2
+## Dependencies
+none, just download MPLabX and compile with C18
