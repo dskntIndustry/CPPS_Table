@@ -1,0 +1,11 @@
+
+# 1 "processing.c"
+
+# 17 "processing.h"
+double e, e1, e2, u, delta_u, y;
+double k1, k2, k3, kp, ki, kd;
+double setpoint, u;
+
+void PID_init(void);
+void PID_exec(void);
+

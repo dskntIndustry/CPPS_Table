@@ -1,0 +1,1 @@
+ dist/Seism/debug/doprnt.d  dist/Seism/debug/doprnt.p1:  C:/Program\ Files\ (x86)/Microchip/xc8/v1.32/sources/common/doprnt.c

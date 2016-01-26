@@ -1,0 +1,1 @@
+ dist/Seism/production/doprnt.d  dist/Seism/production/doprnt.p1:  C:/Program\ Files\ (x86)/Microchip/xc8/v1.32/sources/common/doprnt.c

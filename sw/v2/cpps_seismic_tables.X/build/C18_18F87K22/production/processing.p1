@@ -1,0 +1,22 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"17 processing.h
+[v _e `d ~T0 @X0 1 e ]
+[v _e1 `d ~T0 @X0 1 e ]
+[v _e2 `d ~T0 @X0 1 e ]
+[v _u `d ~T0 @X0 1 e ]
+[v _delta_u `d ~T0 @X0 1 e ]
+[v _y `d ~T0 @X0 1 e ]
+[; ;processing.h: 17: double e, e1, e2, u, delta_u, y;
+"18
+[v _k1 `d ~T0 @X0 1 e ]
+[v _k2 `d ~T0 @X0 1 e ]
+[v _k3 `d ~T0 @X0 1 e ]
+[v _kp `d ~T0 @X0 1 e ]
+[v _ki `d ~T0 @X0 1 e ]
+[v _kd `d ~T0 @X0 1 e ]
+[; ;processing.h: 18: double k1, k2, k3, kp, ki, kd;
+"19
+[v _setpoint `d ~T0 @X0 1 e ]
+[; ;processing.h: 19: double setpoint, u;
+[; ;processing.h: 21: void PID_init(void);
+[; ;processing.h: 22: void PID_exec(void);
