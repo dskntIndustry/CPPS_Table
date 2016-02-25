@@ -1,5 +1,5 @@
 /*#include "constants.h"
-#include "hwsetup.h"*/
+  #include "hwsetup.h"*/
 
 double pot_frequency;
 word pot_value;
@@ -20,125 +20,118 @@ int lastStartButtonState = 0;
 
 int adcRead(int pin)
 {
-	int adc_value = analogRead(pin);
-	delay(ADC_READ_WAIT);
-	return adc_value;
+  int adc_value = analogRead(pin);
+  delay(ADC_READ_WAIT);
+  return adc_value;
 }
 
 void readInputs() {
   // Read analog buttons
-	
-	#ifdef CFG_HOUSE
 
-		pot_value = adcRead(FREQUENCY_POT);
+#ifdef CFG_HOUSE
 
-	#endif
+  pot_value = adcRead(FREQUENCY_POT);
+  Serial.print("pot_value: ");
+  Serial.println(pot_value);
 
-	// Read digital buttons
-	#ifdef CFG_ROD
-		pot_pins = 0;
-		if (digitalRead(POT_PIN1))
-		{
-			pot_pins &= ~(1 << 0); // clear bit
-		}
-		else
-		{
-			pot_pins |= 1 << 0;    // set bit
-		}
+#endif
 
-		if (digitalRead(POT_PIN2))
-		{
-			pot_pins &= ~(1 << 1); // clear bit
-		}
-		else
-		{
-			pot_pins |= 1 << 1;    // set bit
-		}
+  // Read digital buttons
+#ifdef CFG_ROD
+  pot_pins = 0;
+  if (digitalRead(POT_PIN1))
+  {
+    pot_pins &= ~(1 << 0); // clear bit
+  }
+  else
+  {
+    pot_pins |= 1 << 0;    // set bit
+  }
 
-		if (digitalRead(POT_PIN4))
-		{
-			pot_pins &= ~(1 << 2); // clear bit
-		}
-		else
-		{
-			pot_pins |= 1 << 2;    // set bit
-		}
+  if (digitalRead(POT_PIN2))
+  {
+    pot_pins &= ~(1 << 1); // clear bit
+  }
+  else
+  {
+    pot_pins |= 1 << 1;    // set bit
+  }
 
-		if (digitalRead(POT_PIN8))
-		{
-			pot_pins &= ~(1 << 3); // clear bit
-		}
-		else
-		{
-			pot_pins |= 1 << 3;    // set bit
-		}
-		pot_setup = adcRead(POT_SETUP);
-		setupButton.update();
-		
-		Serial.println(pot_pins, HEX);
+  if (digitalRead(POT_PIN4))
+  {
+    pot_pins &= ~(1 << 2); // clear bit
+  }
+  else
+  {
+    pot_pins |= 1 << 2;    // set bit
+  }
 
-		if (setupButton.risingEdge())
-		{
-			if (setup_on)
-			{
-				setup_on = false;
-			}
-			else
-			{
-				setup_on = true;
-			}
-		}
+  if (digitalRead(POT_PIN8))
+  {
+    pot_pins &= ~(1 << 3); // clear bit
+  }
+  else
+  {
+    pot_pins |= 1 << 3;    // set bit
+  }
+  pot_setup = adcRead(POT_SETUP);
+  setupButton.update();
 
-	#endif
+  Serial.println(pot_pins, HEX);
 
-	startButton.update();
-	if(startButton.risingEdge())
-	{
-		state_count++;
-/*		Serial.println("Rising");
-		Serial.println(state_count);*/
-		if(state_count%2==1)
-		{
-			currentStartButtonState = 1;
-			digitalWrite(LED_START, HIGH);
-			
-		}
-		else
-		{
-			currentStartButtonState = 0;
-			digitalWrite(LED_START, LOW);
-			
-		}
-	}
+  if (setupButton.risingEdge())
+  {
+    if (setup_on)
+    {
+      setup_on = false;
+    }
+    else
+    {
+      setup_on = true;
+    }
+  }
 
+#endif
 
+  startButton.update();
+  Serial.print(currentStartButtonState);
+  if (currentStartButtonState == 0 &&startButton.risingEdge())
+  {
+       currentStartButtonState = 1;
+      digitalWrite(LED_START, HIGH);
+  }
+  else if(currentStartButtonState == 1 && startButton.risingEdge())
+  {
+      currentStartButtonState = 0;
+      digitalWrite(LED_START, LOW);
+  }
 }
 
 word getPotValue()
 {
-	return pot_value;
+  return pot_value;
 }
 
 int getCurrenStartButtonState()
 {
-	return currentStartButtonState;
+  return currentStartButtonState;
 }
 
 int getCurrenSetupButtonState()
 {
-	return setup_on;
+  return setup_on;
 }
 
 double getPotFrequency()
 {
-	pot_frequency = (double)FREQUENCY_MIN+
-	((POT_MAX-pot_value)/(POT_MAX+1))
-	*(FREQUENCY_MAX-FREQUENCY_MIN);
+  pot_frequency = (double)FREQUENCY_MIN +
+                  ((POT_MAX - pot_value) / (POT_MAX + 1))
+                  * (FREQUENCY_MAX - FREQUENCY_MIN);
 
-	return pot_frequency;
+  return pot_frequency;
 }
 
 int getPotSetup()
 {
-	return pot_setup;
+  return pot_setup;
 }

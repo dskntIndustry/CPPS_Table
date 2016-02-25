@@ -9,8 +9,12 @@ double pwm_frequency;
 double pwm_duty;
 double pwm_period;
 
-void changePWMSettings(double frequency, double duty)
+void updatePWMSettings(double frequency, double duty)
 {
+  Serial.print("frequency: ");
+  Serial.println(frequency);
+  Serial.print("duty: ");
+  Serial.println(duty);
 	pwm_frequency = frequency;
 	pwm_period = (1.0/frequency)*USEC;
 	pwm_duty = duty;
