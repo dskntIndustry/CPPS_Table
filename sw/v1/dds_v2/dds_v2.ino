@@ -9,6 +9,8 @@
 #include "ioutils.h"
 #include "button.h"
 
+//TODO attach interrupt to button start (pin 0)
+
 int start_pwm = 0;
 
 
