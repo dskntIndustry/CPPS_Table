@@ -11,7 +11,7 @@
 #include "ioutils.h"
 #include "button.h"
 
-// put your setup code here, to run once:
+
 void setup()
 {
   //Init pins values
@@ -19,7 +19,6 @@ void setup()
   initSerialOutput();
 }
 
-// put your main code here, to run repeatedly:
 void loop()
 {
   readInputs();
