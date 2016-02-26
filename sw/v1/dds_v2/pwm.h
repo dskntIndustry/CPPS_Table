@@ -45,6 +45,7 @@ void doPWM()
 	}
 	else
 	{
+    pwm_duty = pwm_frequency*0.02;
 		digitalWrite(PWM_OUTPUT_0, HIGH);
 		digitalWrite(PWM_OUTPUT_1, LOW);
 
